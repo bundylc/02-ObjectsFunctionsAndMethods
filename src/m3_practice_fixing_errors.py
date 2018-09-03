@@ -41,7 +41,7 @@ def te_fn():
 def main():
     """ Calls the other functions in this module to demo them. """
     print_math()
-    utl te_fn()
+    utl.te_fn()
 
 
 def print_math():
