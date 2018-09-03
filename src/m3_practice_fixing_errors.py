@@ -35,22 +35,19 @@ import rosegraphics as rg
 import math
 
 
-def te_fn():
-
-
 def main():
-    """ Calls the other functions in this module to demo them. """
     print_math()
-    utl.te_fn()
+    turtle_fun()
 
 
 def print_math():
+
     """ Prints some calculated values. """
-    x = math.cos(pi)
+    x = math.cos(math.pi)
     print(x)
 
-    y = math.sin(pi)
-    print(The sine of PI is, y)
+    y = math.sin(math.pi)
+    print(math.sin(math.pi) is y)
 
 
 def turtle_fun():
@@ -62,15 +59,15 @@ def turtle_fun():
     window = rg.TurtleWindow()
 
     alan = rg.SimpleTurtle('turtle')
-alan.pen = rg.Pen('blue', 30)
-alan.paint_bucket = rg.PaintBucket('yellow')
+    alan.pen = rg.Pen('blue', 30)
+    alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16)
-    al.begin_fill()
-    alan.circle(25)
+    alan.backward(3 * (47 + 16))
+    alan.begin_fill()
+    alan.draw_circle(25)
     alan.end_fill()
 
-    forward(200)
+    alan.forward(200)
 
     window.close_on_mouse_click()
 
@@ -78,3 +75,4 @@ alan.paint_bucket = rg.PaintBucket('yellow')
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+
