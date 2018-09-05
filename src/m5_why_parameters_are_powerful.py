@@ -22,6 +22,12 @@ def main():
     draw_circles(rg.Point(100, 50))
     draw_circles(rg.Point(-200, 0))
 
+    better_draw_circles(rg.Point(50, 100), 25)
+    better_draw_circles(rg.Point(0, -200), 5)
+
+    even_better_draw_circles(rg.Point(75, 75), 50, 8, 'green', 5)
+    even_better_draw_circles(rg.Point(0, -100), 10, 11, 'blue', 10)
+
     window.update()
     window.close_on_mouse_click()
 
@@ -120,7 +126,7 @@ def draw_circles(point):
 # ###############################################################################
 
 
-def better_draw_circles(point):
+def better_draw_circles(point, distance):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
@@ -136,11 +142,11 @@ def better_draw_circles(point):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(3)
+        turtle.forward(distance)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(3 * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(distance * k)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
@@ -175,26 +181,28 @@ def better_draw_circles(point):
 #
 ###############################################################################
 
-def even_better_draw_circles(point):
+def even_better_draw_circles(point, distance, number, color, thickness):
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:
 
- turtle = rg.SimpleTurtle()
-turtle.pen_up()
-turtle.go_to(100)
-turtle.set_heading(0)  # Point "east" (towards the right)
+    turtle = rg.SimpleTurtle()
+    turtle.pen_up()
+    turtle.pen = rg.Pen('blue', 5)
+    turtle.go_to(point)
+    turtle.set_heading(0)  # Point "east" (towards the right)
 
-for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
+    for k in range(1, 8):  # k becomes 1, 2, 3, ... 10
 
         turtle.pen_up()
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(3)
+        turtle.forward(distance)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(3 * k)
+        turtle.draw_circle(distance * k)
+
 
 ###############################################################################
 # TODO: 5.

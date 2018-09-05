@@ -142,17 +142,16 @@ def try_methods():
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
+    window = rg.TurtleWindow
 
-window = rg.TurtleWindow
+    joe = rg.SimpleTurtle('turtle')
 
-joe = rg.SimpleTurtle('turtle')
+    joe.pen = rg.Pen('brown', 5)
 
-joe.pen = rg.Pen('brown',5)
-
-joe.forward(150)
-joe.left(90)
-joe.forward(50)
-joe.backward(100)
+    joe.forward(150)
+    joe.left(90)
+    joe.forward(50)
+    joe.backward(100)
 
 
 def try_functions():
@@ -173,10 +172,9 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     ###########################################################################
 
-
-jump_and_move_turtle(200, 100, 300, 30)
-jump_and_move_turtle(100, 200, 0, 0)
-jump_and_move_turtle(-50, 50, 100, 100)
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
 
 def try_methods_and_functions():
@@ -213,7 +211,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # TODONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
@@ -221,41 +219,36 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
 
+    rg.TurtleWindow()
+    joe = rg.SimpleTurtle()
 
-rg.TurtleWindow()
-joe = rg.SimpleTurtle()
+    joe.pen = rg.Pen('blue', 5)
 
-joe.pen = rg.Pen('blue', 5)
+    joe.backward(150)
+    joe.speed = 1
+    draw_many_squares(joe, 2, 100, 30)
 
-joe.backward(150)
-joe.speed = 1
-joe.draw_square(100)
-joe.left(30)
-joe.draw_square(100)
+    for x in range(10):
+        joe.speed = 5
+        joe.pen = rg.Pen('red', 3)
 
+        joe.draw_square(50)
+        joe.left(15)
 
-for x in range(10):
+    for x in range(8):
+        joe.speed = 100
+        joe.pen = rg.Pen('red', 35)
 
-    joe.speed = 5
-    joe.pen = rg.Pen('red', 3)
+        joe.draw_square(300)
+        joe.left(60)
+
+    joe.pen = rg.Pen('black', 3)
+    joe.backward(200)
+
+    joe.draw_circle(30)
 
     joe.draw_square(50)
-    joe.left(15)
 
-for x in range(8):
-
-    joe.speed = 100
-    joe.pen = rg.Pen('red', 35)
-
-    joe.draw_square(300)
-    joe.left(60)
-
-joe.pen = rg.Pen('black', 3)
-joe.backward(200)
-
-joe.draw_circle(30)
-
-joe.draw_square(50)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
