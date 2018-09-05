@@ -1,7 +1,7 @@
 """
 This module lets you experience the POWER of FUNCTIONS and PARAMETERS.
 Authors: David Mutchler, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Landon Bundy.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -28,7 +28,7 @@ def main():
 
 ###############################################################################
 #
-# TODO: 2.
+# TODONE: 2.
 #   First, RUN this program.  You will see that it draws concentric circles
 #   whose radii vary by 15.
 #
@@ -88,7 +88,7 @@ def draw_circles(point):
 
 ###############################################################################
 #
-# TODO: 3a.
+# TODONE: 3a.
 #   The function
 #       better_draw_circles
 #   defined below this _TODO_ starts out exactly the same as the code for
@@ -111,7 +111,7 @@ def draw_circles(point):
 #   just as in   draw_circles.  But if that parameter is given the value 3,
 #   then the circles should have radii:  3  6  9  12  15  18 ..., respectively.
 #
-# TODO: 3b.
+# TODONE: 3b.
 #   In   main  at the place indicated, comment-out the two existing calls
 #   to  draw_circles  and add at least two calls to the improved
 #   better_draw_circles  function, to TEST that your modified code is correct
@@ -136,11 +136,11 @@ def better_draw_circles(point):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(15)
+        turtle.forward(3)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(15 * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(3 * k)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
@@ -179,6 +179,22 @@ def even_better_draw_circles(point):
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:
 
+ turtle = rg.SimpleTurtle()
+turtle.pen_up()
+turtle.go_to(100)
+turtle.set_heading(0)  # Point "east" (towards the right)
+
+for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
+
+        turtle.pen_up()
+
+        # Go DOWN 15 pixels, ending up pointing east again
+        turtle.right(90)
+        turtle.forward(3)
+        turtle.left(90)
+
+        turtle.pen_down()
+        turtle.draw_circle(3 * k)
 
 ###############################################################################
 # TODO: 5.

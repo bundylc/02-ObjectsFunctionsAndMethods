@@ -225,7 +225,7 @@ def try_methods_and_functions():
 rg.TurtleWindow()
 joe = rg.SimpleTurtle()
 
-joe.pen = rg.Pen('blue',5)
+joe.pen = rg.Pen('blue', 5)
 
 joe.backward(150)
 joe.speed = 1
@@ -235,10 +235,12 @@ joe.draw_square(100)
 
 joe.speed = 5
 joe.pen = rg.Color('red')
-jump_and_move_turtle()
 
-joe.draw_square(50)
-joe.left(15)
+for x in range(10):
+
+    joe.draw_square(50)
+    joe.left(15)
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
