@@ -233,13 +233,29 @@ joe.draw_square(100)
 joe.left(30)
 joe.draw_square(100)
 
-joe.speed = 5
-joe.pen = rg.Color('red')
 
 for x in range(10):
 
+    joe.speed = 5
+    joe.pen = rg.Pen('red', 3)
+
     joe.draw_square(50)
     joe.left(15)
+
+for x in range(8):
+
+    joe.speed = 100
+    joe.pen = rg.Pen('red', 35)
+
+    joe.draw_square(300)
+    joe.left(60)
+
+joe.pen = rg.Pen('black', 3)
+joe.backward(200)
+
+joe.draw_circle(30)
+
+joe.draw_square(50)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
